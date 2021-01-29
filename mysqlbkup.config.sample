@@ -5,9 +5,9 @@
 
 DEFAULTS_FILE=/etc/mysqlbkup.cnf
 
-BACKUP_DIR=/var/mysqlbkup
+BACKUP_DIR=/var/lib/mysql/mysqlbkup
 
-MAX_BACKUPS=3
+MAX_BACKUPS=7
 
 DATE_FORMAT=
 
