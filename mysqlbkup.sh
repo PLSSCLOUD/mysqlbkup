@@ -90,7 +90,7 @@ if [ ! -z $DATE_FORMAT ]; then
 fi
 
 # get the list of dbs to backup, may as well just hit them all..
-dbs=$(echo 'show databases' | mysql --defaults-file=$DEFAULTS_FILE -p$MYSQL_ROOT_PASSWORD )
+dbs=$(echo 'show databases' | mysql --defaults-file=$DEFAULTS_FILE -p${MYSQL_ROOT_PASSWORD} )
 
 # Apply default filters
 db_filter='Database information_schema performance_schema mysql'
@@ -162,7 +162,7 @@ do
         continue;
     fi
 
-    mysqldump -p$MYSQL_ROOT_PASSWORD --defaults-file=$DEFAULTS_FILE "$db" | $BKUP_BIN > "$backupDir/$backupFile"
+    mysqldump --defaults-file=$DEFAULTS_FILE "$db" -p${MYSQL_ROOT_PASSWORD} | $BKUP_BIN > "$backupDir/$backupFile"
     echo
 done
 
