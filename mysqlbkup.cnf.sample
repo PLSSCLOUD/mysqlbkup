@@ -1,12 +1,12 @@
 [mysql]
-host=dbhost
-user=dba
-password=dba_passwd
+host=localhost
+user=root
+#password=dba_passwd
 
 [mysqldump]
-host=dbhost
-user=dba
-password=dba_passwd
+host=localhost
+user=root
+#password=dba_passwd
 force
 opt
 routines
