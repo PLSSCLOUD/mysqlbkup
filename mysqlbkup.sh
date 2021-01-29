@@ -44,7 +44,7 @@ fi
 
 if [ ! -d "$BACKUP_DIR" ]; then
     echo "Backup directory $BACKUP_DIR does not exist." 1>&2
-    exit 5
+    mkdir -p "$BACKUP_DIR"
 fi
 
 if [ ! -e $DEFAULTS_FILE ]; then
